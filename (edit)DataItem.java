@@ -1,5 +1,5 @@
 package th.ac.utcc.eng.cpe.nc252.linkedlist;
-
+//edit 26/12/61
 public class DataItem {
 	//public String	subjectName; 	// data item: subject name as String
 	public int node; // size
