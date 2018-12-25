@@ -2,6 +2,7 @@ package th.ac.utcc.eng.cpe.nc252.linkedlist;
 
 public class LinkedList {
 	private DataItem first;
+	private int size =6;
 
 	public LinkedList() {
 		first = null;
@@ -12,13 +13,14 @@ public class LinkedList {
 	}
 	
 	public void insertFirst(DataItem newDataItem) {
-		DataItem newLink = newDataItem;
 		newDataItem.next = first;
-		first = newLink;
+		first= newDataItem;
+		first.node = this.size;
+		size--;
 	}
 
 	public DataItem deleteFirst(int key) {
-		DataItem Current = first;
+		DataItem Current = first.next;
 		DataItem Previous = first;
 		while(Current.node != key) { 
 			if(Current.next == null)
@@ -34,8 +36,9 @@ public class LinkedList {
 		else
 			Previous.next = Current.next;
 		return Current;
-		}
 		
+		}
+	
 	public DataItem find(int key) {
 		DataItem Current = first;
 		DataItem Previous = first;
@@ -56,6 +59,20 @@ public class LinkedList {
 		}
 	
 	
+	public int getSize() {
+		return this.size;
+	}
+	
+	public void setSize() {
+		DataItem current = first;
+		size=0;
+		while( current != null ) {
+			current.node = size;
+			size++;
+			current = current.next;			
+		}
+	}
+
 	
 	public void displayList() {
 		System.out.println("List:");

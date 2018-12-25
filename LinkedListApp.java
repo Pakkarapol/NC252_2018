@@ -9,13 +9,13 @@ public class LinkedListApp {
 	public static void main(String[] args) {
 		LinkedList linkedList = new LinkedList();
 		
-		DataItem item1 = new DataItem(1,1);
-		DataItem item2 = new DataItem(3,2);
-		DataItem item3 = new DataItem(5,3);
-		DataItem item4 = new DataItem(7,4);
-		DataItem item5 = new DataItem(9,5);
-		DataItem item6 = new DataItem(10,6);
-		DataItem item7 = new DataItem(13,7);
+		DataItem item1 = new DataItem(6);
+		DataItem item2 = new DataItem(5);
+		DataItem item3 = new DataItem(4);
+		DataItem item4 = new DataItem(3);
+		DataItem item5 = new DataItem(2);
+		DataItem item6 = new DataItem(1);
+		DataItem item7 = new DataItem(0);
 		
 		linkedList.insertFirst(item1);
 		linkedList.insertFirst(item2);
@@ -34,19 +34,22 @@ public class LinkedListApp {
 		
 		
 		
-			DataItem A =linkedList.find(4);
-			if(A!=null)
-				System.out.println("Found It");
 			
-				DataItem D = linkedList.deleteFirst(1);
-				if(D!=null)
-					System.out.println("Found It" + D.node);
-			
-		
-		
+				for(int i = 1; i<=7;i++) {
+				DataItem D = linkedList.deleteFirst(4);
+				linkedList.setSize();
+				System.out.println("\nAfter deleteFirst"+"("+i+")");
+				linkedList.displayList();
+				} 
+				
+				
+				/*linkedList.setSize();
 		System.out.println("\nAfter deleteFirst()#1");
-		linkedList.displayList();
-		
+		linkedList.displayList();*/
+	
+
+
+
 		//linkedList.deleteFirst();
 		//System.out.println("\nAfter deleteFirst()#2");
 		//linkedList.displayList();*/
